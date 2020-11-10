@@ -1,0 +1,51 @@
+<div class="wrapper"></div>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>a</title>
+<link href="/Login/style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="">
+<style>
+      .button {
+        border: none;
+        color: gray;
+        padding: 40px 50px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 24px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+
+      .button {
+        transition-duration: 0.4s;
+      }
+
+      .button:hover {
+        background-color: #4CAF50;
+        /* Green */
+        color: rgb(255, 255, 255);
+
+      }
+
+      }
+</style>
+<script>
+    const onSubmit = (event) => {
+      let username = "jamiem8"
+      let password = "sacrp"
+      event.preventDefault();
+      if((document.getElementById("username").value === username) && (document.getElementById("password").value === password )){
+        window.location.href = "http://127.0.0.1:8080/repository/Dashboard/dashboard.html";
+      }
+    }
+</script>
+<form>
+  <h1>JPL Client</h1>
+  <div class="question">
+    <input id="username" type="text"> <label>Username</label>
+  </div>
+  <div class="question">
+    <input id="password" type="password"> <label>Password</label> <button onclick="onSubmit(event)">Connect</button>
+  </div>
+</form>
