@@ -1,0 +1,142 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 18s ease infinite;
+-z-animation: rainbow 18s ease infinite;
+-o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+.transition, form button, form .question label, form .question input[type="password"], input[type="text"] {
+  -moz-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -o-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  -webkit-transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+  transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
+}
+
+* {
+  font-family: Helvetica, sans-serif;
+  font-weight: light;
+}
+
+html {
+  background-color: #3c3b52;
+}
+body{
+  min-width:600px;
+}
+
+form {
+  position: relative;
+  display: inline-block;
+  max-width: 700px;
+  min-width: 500px;
+  box-sizing: border-box;
+  padding: 30px 25px;
+  background-color: white;
+  border-radius: 40px;
+  margin: 40px 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+form h1 {
+  color: #3c3b52;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  margin-left: 130px;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+form button {
+  margin-top: 20px;
+  margin-left: 165px;
+  background-color: white;
+  border: 1px solid #3c3b52;
+  line-height: 0;
+  font-size: 17px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 15px;
+  border-radius: 60px;
+  color: #3c3b52;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+  cursor:pointer;
+}
+form button:hover, form button:focus {
+  color: white;
+  background-color: #3c3b52;
+}
+form .question {
+  position: relative;
+  padding: 10px 0;
+}
+form .question:first-of-type {
+  padding-top: 0;
+}
+form .question:last-of-type {
+  padding-bottom: 0;
+}
+form .question label {
+  transform-origin: left center;
+  color: #3c3b52;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  font-size: 17px;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  display: block;
+  position: absolute;
+  margin-top: -40px;
+  z-index: 2;
+  pointer-events: none;
+}
+form .question input[type="password"], input[type="text"] {
+  appearance: none;
+  background-color: none;
+  border: 1px solid #3c3b52;
+  line-height: 0;
+  font-size: 17px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 15px;
+  border-radius: 60px;
+  color: #ff4a56;
+  font-weight: 100;
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 1;
+}
+form .question input[type="password"]:focus, input[type="text"]:focus {
+  outline: none;
+  background: #3c3b52;
+  color: white;
+  margin-top: 30px;
+}
+form .question input[type="password"]:valid, input[type="text"]:valid {
+  margin-top: 30px;
+}
+form .question input[type="password"]:focus + label, input[type="text"]:focus + label {
+  transform: translate(0, -35px);
+}
+form .question input[type="password"]:valid + label, input[type="text"]:valid + label {
+  text-transform: uppercase;
+  font-style: italic;
+  transform: translate(5px, -35px) scale(0.6);
+}
