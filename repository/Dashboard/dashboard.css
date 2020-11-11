@@ -42,7 +42,7 @@ background-size: 1800% 1800%;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-    background: white;
+    background: #191919;
     -webkit-animation: rainbow 18s ease infinite;
     -z-animation: rainbow 18s ease infinite;
     -o-animation: rainbow 18s ease infinite;
