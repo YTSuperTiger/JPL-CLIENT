@@ -22,8 +22,8 @@ input.keypress(function(e) {
 		} else if (inputVal == "about") {
 			aboutMe();
 			input.val('');
-		} else if (inputVal == "contact") {
-			contactMe();
+		} else if (inputVal == "disconnect") {
+			disconnect();
 			input.val('');
 		} else if (inputVal == "clear") {
 			clearConsole();
@@ -96,7 +96,7 @@ function sudo(data) {
 	} else if (data.startsWith("apt-get") === true) {
 		data = "<span class='green'>Updating...</span> The cake is a lie! There is nothing to update..."
 	} else {
-		data = "The force is week within you, my master you not be!"
+		data = "The force is weak within you, my master you not be!"
 	}
 	Output('<span>' + data + '</span></br>');
 }
@@ -106,8 +106,8 @@ function getTime() {
 	Output('<span>It\'s the 21st century man! Get a SmartWatch</span></br>');
 }
 
-function aboutMe() {
-	var aboutMeArray = ['>About:', 'Hi There!', 'I\'m Mario, a Digital Developer working [@wearecollider](http://www.wearecollider.com) during the day and a designer, freerider, pcbuilder, droneracer and science lover on my free time.', 'Fell free to follow me on twitter @MDesignsuk - see contact page.'];
+function disconnect() {
+	var aboutMeArray = ['Disconnected'];
 	seperator();
 	for (var i = 0; i < aboutMeArray.length; i++) {
 		var out = '<span>' + aboutMeArray[i] + '</span><br/>'
