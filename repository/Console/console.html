@@ -46,7 +46,15 @@
       font-family: 'Press Start 2P', cursive;
       background-color: #212121;
     }
-
+    button{
+      padding: 0;
+      margin: 0;
+      color: #22ff00;
+      background-color: #212121;
+      font-family: 'Press Start 2P', cursive;
+      outline: none;
+      border: none;
+    }
     h1,
     h2,
     p,
@@ -234,11 +242,17 @@ span.seperator {
 		<span>Initializing...</span><br/>
 		<span class="green">0.0002ms ok!</span><br/>
 		<span class="seperator">== == == == == == == == == == == == == == == == == ==</span></br>
-		<pre contenteditable="false">JPL CONSOLE</pre></br>
+		<pre contenteditable="false">       _ _____  _         _____ ____  _   _  _____  ____  _      ______ 
+      | |  __ \| |       / ____/ __ \| \ | |/ ____|/ __ \| |    |  ____|
+      | | |__) | |      | |   | |  | |  \| | (___ | |  | | |    | |__   
+  _   | |  ___/| |      | |   | |  | | . ` |\___ \| |  | | |    |  __|  
+ | |__| | |    | |____  | |___| |__| | |\  |____) | |__| | |____| |____ 
+  \____/|_|    |______|  \_____\____/|_| \_|_____/ \____/|______|______|
+</pre></br>
 		<span class="seperator">== == == == == == == == == == == == == == == == == ==</span></br>
 		<span>Hope you have fun discovering all the <span class="red">hidden gems</span>!</span>
 		</br>
-		<span class="blue">type '<span class="grey">help</span>' to see a list of comands available <br/> or '<span class="grey">contact</span>' for a list of ways to contact me.</span><br>
+		<span class="blue">type '<span class="grey">help</span>' to see a list of comands available <br/> or '<span class="grey">disconnect</span>' to disconnect the client.</span><br>
 	</div>
 	<div class="action">
 		<span>dev$ </span>
@@ -274,8 +288,11 @@ input.keypress(function (e) {
     } else if (inputVal == "about") {
       aboutMe();
       input.val('');
-    } else if (inputVal == "contact") {
-      contactMe();
+    } else if (inputVal == "disconnect") {
+      disconnect();
+      input.val('');
+    } else if (inputval == "reconnect") {
+      reconnect();
       input.val('');
     } else if (inputVal == "clear") {
       clearConsole();
@@ -358,15 +375,23 @@ function getTime() {
   Output('<span>It\'s the 21st century man! Get a SmartWatch</span></br>');
 }
 
-function aboutMe() {
-  var aboutMeArray = ['>About:', 'Hi There!', 'I\'m Mario, a Digital Developer working [@wearecollider](http://www.wearecollider.com) during the day and a designer, freerider, pcbuilder, droneracer and science lover on my free time.', 'Fell free to follow me on twitter @MDesignsuk - see contact page.'];
+function disconnect() {
+  var aboutMeArray = ['Disconnected'];
+  var aboutMeArray2 = [' Reconnect?' ];
   seperator();
   for (var i = 0; i < aboutMeArray.length; i++) {if (window.CP.shouldStopExecution(1)) break;
-    var out = '<span>' + aboutMeArray[i] + '</span><br/>';
+    var out = '<span>' + aboutMeArray[i] + '<button onclick="reconnect()"> ('+ aboutMeArray2[i] + ')</button>' +'</span><br/>';
     Output(out);
   }window.CP.exitedLoop(1);
   seperator();
 }
+
+function reconnect(){
+  var reconnection = ['Reconnected'];
+  var out = '<span>' + reconnection + '</span><br/>';
+  Output(out);
+  seperator();
+}window.CP.exitedLoop(1);
 
 function contactMe() {
   var contactArray = ['>Contact:', '[GitHub](https://github.com/Mario-Duarte)', '[BitBucket](https://bitbucket.org/Mario_Duarte/)', '[CodePen](https://codepen.io/MarioDesigns/)', '[Twitter](https://twitter.com/MDesignsuk)'];

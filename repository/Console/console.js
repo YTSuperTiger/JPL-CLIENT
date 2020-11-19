@@ -19,7 +19,7 @@ input.keypress(function(e) {
 		} else if (inputVal == "ping") {
 			pong();
 			input.val('');
-		} else if (inputVal == "about") {
+		} else if (inputVal == "a") {
 			aboutMe();
 			input.val('');
 		} else if (inputVal == "disconnect") {
